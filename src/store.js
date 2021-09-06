@@ -2035,7 +2035,13 @@ export const store = createStore({
                 if (item.count < item.brackets.length) {
                 
                     let limit = item.brackets[item.count]
-                    item.progress = 100 * state.data[item.data].count / limit
+                  if (item.count === 0) {
+                    item.progress = (100 * state.data[item.data].count) / limit
+                  } else {
+                    const prev = item.brackets[item.count - 1]
+                    item.progress =
+                      (100 * (state.data[item.data].count - prev)) / (limit - prev)
+                  }
                     if (item.progress >= 100) {
                         item.count += 1
                         commit('addNotif', 'achievementPane')
