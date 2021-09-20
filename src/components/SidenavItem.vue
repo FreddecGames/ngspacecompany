@@ -36,11 +36,11 @@
                     </div>
                 </button>
             </div>
-                        <div v-if="prod !=null && displayNanoswarmShortcut" class="col-auto" >
-                        <button class="btn btn-small" @click.stop="switchNano(this.shortId)">
-                                <img :src="require(!selected?'../assets/interface/nanoswarm.png':'../assets/interface/nanoswarm_green.png')" width="14" height="14" alt="nanoswarm icon" />
-                        </button>
-                        </div>
+            <div v-if="prod !=null && displayNanoswarmShortcut" class="col-auto" >
+                <button class="btn btn-small" @click.stop="switchNano(this.shortId)">
+                    <img :src="require(!selected?'../assets/interface/nanoswarm.png':'../assets/interface/nanoswarm_green.png')" width="14" height="14" alt="nanoswarm icon" />
+                </button>
+            </div>
             <div class="col-auto" style="width: 27px;">
                 <button v-if="buildingStorageId && data['techStorage'].count > 0" :id="'tpUpgradeStorage' + buildingStorageId" class="btn btn-small" :class="{ 'disabled text-muted':!canBuild(buildingStorageId) }" aria-label="Upgrade storage" @click.stop="build({id:buildingStorageId, count:1})">
                     <i class="fas fa-fw fa-arrow-alt-circle-up"></i>
