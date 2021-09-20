@@ -285,6 +285,3 @@ button {
 .tip-normal { color: rgb(0,188,212); border-color: rgba(0,188,212,.5); background: rgba(0,188,212,.125); }
 
 /* -------------------------------------------------------------------------- */
-
-.wider { width: 100px;}
-.narrower { width: 80px;}
