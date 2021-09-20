@@ -138,7 +138,12 @@
                                 <option value="antimatter">{{ $t('antimatter') }}</option>
                             </select>
                         </div>
-                        
+                        <div v-if="id == 'nanoswarm'" class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="checkNanoswarmShortcut" v-model="showNanoswarmShortcut" @click="setDisplayNanoswarmShortcut(!showNanoswarmShortcut)" />
+                                <label class="form-check-label small" for="checkNanoswarmShortcut">{{ $t('showNanoswarmShortcut') }}</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                     
@@ -281,18 +286,19 @@ export default {
     },
     computed: {
         ...mapState([
-            'data', 'displayLockedItems',
+            'data', 'displayLockedItems', 'displayNanoswarmShortcut' 
         ]),
         ...mapGetters([
             'isCollapsed'
         ]),
+        showNanoswarmShortcut: function(){return this.displayNanoswarmShortcut},
     },
     methods: {
         ...mapActions([
             'build', 'destroy', 'switchNano',
         ]),
         ...mapMutations([
-            'toggleCollapsed', 'setAutoStorageUpgrade', 'setActivePane',
+            'toggleCollapsed', 'setAutoStorageUpgrade', 'setActivePane', 'setDisplayNanoswarmShortcut',
         ]),
     },
 }

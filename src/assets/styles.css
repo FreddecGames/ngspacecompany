@@ -82,7 +82,7 @@ body {
 @media (min-width: 992px) {
     #sidebar {
         z-index: auto;
-        width: 320px;
+        width: 340px;
         transform: translateX(0) translateY(0) translateZ(0);
     }
 }
@@ -285,3 +285,6 @@ button {
 .tip-normal { color: rgb(0,188,212); border-color: rgba(0,188,212,.5); background: rgba(0,188,212,.125); }
 
 /* -------------------------------------------------------------------------- */
+
+.wider { width: 100px;}
+.narrower { width: 80px;}

@@ -1071,6 +1071,7 @@
     "bigTimer": "> 48h",
     "selectEmcAmount": "Choisissez un montant",
     "showEmcShortcut": "Afficher le raccourci CEM",
+    "showNanoswarmShortcut": "Afficher le raccourci Nanoswarm",
     "changeLog": "Change Log",
     "notEnoughInputCount": "Pas de production, pas assez de",
     "notEnoughInputStorage": "Pas de production, stockage trop petit",

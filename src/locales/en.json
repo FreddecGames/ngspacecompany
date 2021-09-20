@@ -1104,6 +1104,7 @@
     "bigTimer": "> 48h",
     "selectEmcAmount": "Select Amount",
     "showEmcShortcut": "Display EMC shortcut",
+    "showNanoswarmShortcut": "Display Nanoswarm shortcut",
     "changeLog": "Change Log",
     "notEnoughInputCount": "No production, not enough input count",
     "notEnoughInputStorage": "No production, not enough input storage",

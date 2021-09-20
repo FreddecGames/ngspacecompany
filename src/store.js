@@ -75,6 +75,7 @@ export const store = createStore({
             displayDoneTechs: true,
             displayRoadmap: true,
             displayEmcShortcut: false,
+            displayNanoswarmShortcut: false,
             collapsed: [],
             pinned: [],
             /*----------------------------------------------------------------*/
@@ -368,6 +369,7 @@ export const store = createStore({
         setAutoResource(state, payload) { state.autoResource = payload },
         setAutoEmcInterval(state, payload) { state.autoEmcInterval = payload * 1000 },
         setDisplayEmcShortcut(state, payload) { state.displayEmcShortcut = payload },
+        setDisplayNanoswarmShortcut(state, payload) { state.displayNanoswarmShortcut = payload },
         /*--------------------------------------------------------------------*/
         setActivePane(state, payload) {
 
@@ -1608,6 +1610,7 @@ export const store = createStore({
                 state.autoResource = data.autoResource
                 state.autoEmcInterval = data.autoEmcInterval || 1 * 1000
                 state.displayEmcShortcut = data.displayEmcShortcut || false,
+                state.displayNanoswarmShortcut = data.displayNanoswarmShortcut || false,
                 state.collapsed = data.collapsed || []
                 state.pinned = data.pinned || []
                 state.titanSwapingCount = data.titanSwapingCount || 0
@@ -1806,6 +1809,7 @@ export const store = createStore({
                 autoResource: state.autoResource,
                 autoEmcInterval: state.autoEmcInterval,
                 displayEmcShortcut: state.displayEmcShortcut,
+                displayNanoswarmShortcut: state.displayNanoswarmShortcut,
                 stats: state.stats,
                 collapsed: state.collapsed,
                 pinned: state.pinned,
@@ -2033,7 +2037,7 @@ export const store = createStore({
             let totalAchieved = 0
             state.achievements.forEach(item => {
                 if (item.count < item.brackets.length) {
-                
+
                     let limit = item.brackets[item.count]
                     item.progress = 100 * state.data[item.data].count / limit
                     if (item.progress >= 100) {
@@ -2620,6 +2624,7 @@ export const store = createStore({
             state.autoResource = null
             state.autoEmcInterval = 1 * 1000
             state.displayEmcShortcut = false
+            state.displayNanoswarmShortcut = false
             
             let exludedList = [
                 'darkmatter',
@@ -2707,6 +2712,7 @@ export const store = createStore({
             state.autoResource = null
             state.autoEmcInterval = 1 * 1000
             state.displayEmcShortcut = false
+            state.displayNanoswarmShortcut = false
             
             let exludedList = [
                 'darkmatter',
